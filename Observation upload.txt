@@ -1,0 +1,56 @@
+When K=5 using KNN
+
+The confusion matrix:
+      0   1 
+ 0 2322 414 
+ 1 504 1360
+TPR= 0.7666290868094702 FPR= 0.17834394904458598
+
+When K=1 using KNN
+
+The confusion matrix:
+     0   1 
+ 0 2436 355 
+ 1 414 1396
+TPR= 0.7972587093089663 FPR= 0.14526315789473684
+
+
+When K=7 using KNN
+
+The confusion matrix:
+     0   1 
+ 0 2328 480 
+ 1 507 1284
+TPR= 0.7278911564625851 FPR= 0.17883597883597885
+
+When K=15 using KNN
+
+The confusion matrix:
+
+     0   1 
+ 0 2329 422 
+ 1 522 1328
+TPR= 0.7588571428571429 FPR= 0.18309365135040337
+
+"
+When n_folds=5 using extra_trees
+
+The confusion matrix
+    0    1 
+ 0 2350 437 
+ 1 386 1427
+
+TPR= 0.7655579399141631 FPR= 0.14108187134502925
+"
+
+"The K=5 using KNN yields the worse performance. 
+The K=1 using KNN yields the best performance.
+The extra_trees perform better than the average performance of KNN in this senario"
+
+the above extra trees and the conclusions are from previous version that is withouth shuffle
+
+After adding shuffle there isn't much time left for me to test all of the data.
+
+The new observation is that the KNN performs much better than it was without shuffle. 
+
+K=1 still yields the best performance amount K=5, K=1, K=15 and K=7 of a TPR rate of 80%
